@@ -1,5 +1,7 @@
 var marked = require('marked');
 
+document.body.innerText = localStorage['edit'] || '';
+
 var editMode = 1;
 var content = document.body.innerText;
 
@@ -36,6 +38,7 @@ var keydown = function (event) {
   if (event.which === 13 && cmdDown === true) {
     switchMode();
   }
+  localStorage['edit'] = document.body.innerText;
   console.log(cmdDown);
 };
 
