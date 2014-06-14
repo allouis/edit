@@ -30,7 +30,7 @@ var switchMode = function () {
 var cmdDown = false;
 
 var keydown = function (event) {
-  if (event.which === 93) {
+  if (event.which === 93 || event.which === 93) {
     cmdDown = true;
   }
   console.log(event.which);
@@ -41,7 +41,7 @@ var keydown = function (event) {
 };
 
 var keyup = function (event) {
-  if (event.which === 93) {
+  if (event.which === 93 || event.which === 224) {
     cmdDown = false;
   } 
   console.log(cmdDown);
